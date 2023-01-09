@@ -20,9 +20,9 @@ public class AppDbContext: DbContext
         {
             Id = 2,
             Name = "Camiseta No Internet",
-            Price = new decimal(69.9),
+            Price = 69.9M,
             Description = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.<br/>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.<br/>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
-            ImageUrl = "https://github.com/nelsonrzjunior/geekshopping/images/2_no_internet.jpg?raw=true",
+            ImageUrl = "https://github.com/nelson-rz-junior/GeekShopping/blob/master/Images/2_no_internet.jpg?raw=true",
             CategoryName = "T-shirt"
         });
 
@@ -30,9 +30,9 @@ public class AppDbContext: DbContext
         {
             Id = 3,
             Name = "Capacete Darth Vader Star Wars Black Series",
-            Price = new decimal(999.99),
+            Price = 999.99M,
             Description = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.<br/>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.<br/>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
-            ImageUrl = "https://github.com/nelsonrzjunior/geekshopping/images/3_vader.jpg?raw=true",
+            ImageUrl = "https://github.com/nelson-rz-junior/GeekShopping/blob/master/Images/3_vader.jpg?raw=true",
             CategoryName = "Action Figure"
         });
 
@@ -40,9 +40,9 @@ public class AppDbContext: DbContext
         {
             Id = 4,
             Name = "Star Wars The Black Series Hasbro - Stormtrooper Imperial",
-            Price = new decimal(189.99),
+            Price = 189.99M,
             Description = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.<br/>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.<br/>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
-            ImageUrl = "https://github.com/nelsonrzjunior/geekshopping/images/4_storm_tropper.jpg?raw=true",
+            ImageUrl = "https://github.com/nelson-rz-junior/GeekShopping/blob/master/Images/4_storm_tropper.jpg?raw=true",
             CategoryName = "Action Figure"
         });
 
@@ -50,9 +50,9 @@ public class AppDbContext: DbContext
         {
             Id = 5,
             Name = "Camiseta Gamer",
-            Price = new decimal(69.99),
+            Price = 69.99M,
             Description = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.<br/>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.<br/>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
-            ImageUrl = "https://github.com/nelsonrzjunior/geekshopping/images/5_100_gamer.jpg?raw=true",
+            ImageUrl = "https://github.com/nelson-rz-junior/GeekShopping/blob/master/Images/5_100_gamer.jpg?raw=true",
             CategoryName = "T-shirt"
         });
 
@@ -60,9 +60,9 @@ public class AppDbContext: DbContext
         {
             Id = 6,
             Name = "Camiseta SpaceX",
-            Price = new decimal(49.99),
+            Price = 49.99M,
             Description = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.<br/>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.<br/>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
-            ImageUrl = "https://github.com/nelsonrzjunior/geekshopping/images/6_spacex.jpg?raw=true",
+            ImageUrl = "https://github.com/nelson-rz-junior/GeekShopping/blob/master/Images/6_spacex.jpg?raw=true",
             CategoryName = "T-shirt"
         });
 
@@ -70,9 +70,9 @@ public class AppDbContext: DbContext
         {
             Id = 7,
             Name = "Camiseta Feminina Coffee Benefits",
-            Price = new decimal(69.9),
+            Price = 69.9M,
             Description = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.<br/>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.<br/>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
-            ImageUrl = "https://github.com/nelsonrzjunior/geekshopping/images/7_coffee.jpg?raw=true",
+            ImageUrl = "https://github.com/nelson-rz-junior/GeekShopping/blob/master/Images/7_coffee.jpg?raw=true",
             CategoryName = "T-shirt"
         });
 
@@ -80,9 +80,9 @@ public class AppDbContext: DbContext
         {
             Id = 8,
             Name = "Moletom Com Capuz Cobra Kai",
-            Price = new decimal(159.9),
+            Price = 159.9M,
             Description = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.<br/>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.<br/>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
-            ImageUrl = "https://github.com/nelsonrzjunior/geekshopping/images/8_moletom_cobra_kay.jpg?raw=true",
+            ImageUrl = "https://github.com/nelson-rz-junior/GeekShopping/blob/master/Images/8_moletom_cobra_kay.jpg?raw=true",
             CategoryName = "Sweatshirt"
         });
 
@@ -90,9 +90,9 @@ public class AppDbContext: DbContext
         {
             Id = 9,
             Name = "Livro Star Talk – Neil DeGrasse Tyson",
-            Price = new decimal(49.9),
+            Price = 49.9M,
             Description = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.<br/>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.<br/>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
-            ImageUrl = "https://github.com/nelsonrzjunior/geekshopping/images/9_neil.jpg?raw=true",
+            ImageUrl = "https://github.com/nelson-rz-junior/GeekShopping/blob/master/Images/9_neil.jpg?raw=true",
             CategoryName = "Book"
         });
 
@@ -100,9 +100,9 @@ public class AppDbContext: DbContext
         {
             Id = 10,
             Name = "Star Wars Mission Fleet Han Solo Nave Milennium Falcon",
-            Price = new decimal(359.99),
+            Price = 359.99M,
             Description = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.<br/>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.<br/>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
-            ImageUrl = "https://github.com/nelsonrzjunior/geekshopping/images/10_milennium_falcon.jpg?raw=true",
+            ImageUrl = "https://github.com/nelson-rz-junior/GeekShopping/blob/master/Images/10_milennium_falcon.jpg?raw=true",
             CategoryName = "Action Figure"
         });
 
@@ -110,9 +110,9 @@ public class AppDbContext: DbContext
         {
             Id = 11,
             Name = "Camiseta Elon Musk Spacex Marte Occupy Mars",
-            Price = new decimal(59.99),
+            Price = 59.99M,
             Description = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.<br/>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.<br/>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
-            ImageUrl = "https://github.com/nelsonrzjunior/geekshopping/images/11_mars.jpg?raw=true",
+            ImageUrl = "https://github.com/nelson-rz-junior/GeekShopping/blob/master/Images/11_mars.jpg?raw=true",
             CategoryName = "T-shirt"
         });
 
@@ -120,9 +120,9 @@ public class AppDbContext: DbContext
         {
             Id = 12,
             Name = "Camiseta GNU Linux Programador Masculina",
-            Price = new decimal(59.99),
+            Price = 59.99M,
             Description = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.<br/>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.<br/>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
-            ImageUrl = "https://github.com/nelsonrzjunior/geekshopping/images/12_gnu_linux.jpg?raw=true",
+            ImageUrl = "https://github.com/nelson-rz-junior/GeekShopping/blob/master/Images/12_gnu_linux.jpg?raw=true",
             CategoryName = "T-shirt"
         });
 
@@ -130,9 +130,9 @@ public class AppDbContext: DbContext
         {
             Id = 13,
             Name = "Camiseta Goku Fases",
-            Price = new decimal(59.99),
+            Price = 59.99M,
             Description = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.<br/>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.<br/>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
-            ImageUrl = "https://github.com/nelsonrzjunior/geekshopping/images/13_dragon_ball.jpg",
+            ImageUrl = "https://github.com/nelson-rz-junior/GeekShopping/blob/master/Images/13_dragon_ball.jpg?raw=true",
             CategoryName = "T-shirt"
         });
     }
