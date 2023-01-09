@@ -45,7 +45,7 @@ public class ProductController : ControllerBase
 
 		var product = await _productRepository.CreateAsync(productVO);
 
-		return CreatedAtRoute(new { Id = product.Id }, product);
+		return CreatedAtRoute(new { product.Id }, product);
 	}
 
     [HttpPut]
