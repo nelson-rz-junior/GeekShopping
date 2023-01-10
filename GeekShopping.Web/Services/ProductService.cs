@@ -35,7 +35,7 @@ public class ProductService : IProductService
         return await response.Content.ReadFromJsonAsync<ProductViewModel>();
     }
 
-    public async Task<ProductViewModel?> Create(ProductViewModel viewModel)
+    public async Task<ProductViewModel?> CreateAsync(ProductViewModel viewModel)
     {
         var response = await _httpClient.PostAsJsonAsync(BASE_PATH, viewModel);
         if (response.StatusCode == HttpStatusCode.BadRequest)
@@ -48,7 +48,7 @@ public class ProductService : IProductService
         return await response.Content.ReadFromJsonAsync<ProductViewModel>();
     }
 
-    public async Task<ProductViewModel?> Update(ProductViewModel viewModel)
+    public async Task<ProductViewModel?> UpdateAsync(ProductViewModel viewModel)
     {
         var response = await _httpClient.PutAsJsonAsync(BASE_PATH, viewModel);
         if (response.StatusCode == HttpStatusCode.BadRequest)

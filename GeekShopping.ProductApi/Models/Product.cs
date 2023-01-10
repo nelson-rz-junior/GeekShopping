@@ -17,7 +17,6 @@ public class Product: BaseEntity
     [StringLength(50)]
     public string? CategoryName { get; set; }
 
-    [Range(1, 10000)]
     public decimal Price { get; set; }
 
     [StringLength(300)]

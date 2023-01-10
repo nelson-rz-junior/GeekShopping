@@ -47,7 +47,7 @@ public class ProductRepository : IProductRepository
         return _mapper.Map<ProductVO>(product);
     }
 
-    public async Task<bool> DeleteAsync(long id)
+    public async Task<bool> DeleteByIdAsync(long id)
     {
         var product = await _context.Products.FindAsync(id);
         if (product == null)

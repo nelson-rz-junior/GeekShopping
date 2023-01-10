@@ -63,7 +63,7 @@ public class ProductController : ControllerBase
 	[HttpDelete("{id}")]
 	public async Task<ActionResult<bool>> Delete(long id)
 	{
-		var result = await _productRepository.DeleteAsync(id);
+		var result = await _productRepository.DeleteByIdAsync(id);
 		return result ? Ok(result) : BadRequest();
 	}
 }

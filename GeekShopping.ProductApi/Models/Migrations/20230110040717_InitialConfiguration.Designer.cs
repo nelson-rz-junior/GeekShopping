@@ -7,10 +7,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace GeekShopping.ProductApi.Migrations
+namespace GeekShopping.ProductApi.Models.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230110022612_InitialConfiguration")]
+    [Migration("20230110040717_InitialConfiguration")]
     partial class InitialConfiguration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

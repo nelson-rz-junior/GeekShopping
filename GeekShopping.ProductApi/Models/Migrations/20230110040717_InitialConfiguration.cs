@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace GeekShopping.ProductApi.Migrations
+namespace GeekShopping.ProductApi.Models.Migrations
 {
     public partial class InitialConfiguration : Migration
     {

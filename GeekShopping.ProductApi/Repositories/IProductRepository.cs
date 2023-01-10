@@ -12,5 +12,5 @@ public interface IProductRepository
 
     Task<ProductVO> UpdateAsync(ProductVO productVO);
 
-    Task<bool> DeleteAsync(long id);
+    Task<bool> DeleteByIdAsync(long id);
 }

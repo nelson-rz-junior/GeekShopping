@@ -8,9 +8,9 @@ public interface IProductService
 
     Task<ProductViewModel?> GetByIdAsync(long id);
 
-    Task<ProductViewModel?> Create(ProductViewModel viewModel);
+    Task<ProductViewModel?> CreateAsync(ProductViewModel viewModel);
 
-    Task<ProductViewModel?> Update(ProductViewModel viewModel);
+    Task<ProductViewModel?> UpdateAsync(ProductViewModel viewModel);
 
     Task<bool> DeleteByIdAsync(long id);
 }
