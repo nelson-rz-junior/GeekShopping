@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace GeekShopping.ProductApi.Models.Migrations
+namespace GeekShopping.ProductApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     partial class AppDbContextModelSnapshot : ModelSnapshot

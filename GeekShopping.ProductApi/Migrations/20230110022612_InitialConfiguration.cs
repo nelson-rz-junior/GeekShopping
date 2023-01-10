@@ -1,13 +1,39 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace GeekShopping.ProductApi.Models.Migrations
+namespace GeekShopping.ProductApi.Migrations
 {
-    public partial class AddSeedProducts : Migration
+    public partial class InitialConfiguration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.AlterDatabase()
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "Product",
+                columns: table => new
+                {
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(type: "varchar(150)", maxLength: 150, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Description = table.Column<string>(type: "varchar(500)", maxLength: 500, nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    CategoryName = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Price = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
+                    ImageUrl = table.Column<string>(type: "varchar(300)", maxLength: 300, nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Product", x => x.Id);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
             migrationBuilder.InsertData(
                 table: "Product",
                 columns: new[] { "Id", "CategoryName", "Description", "ImageUrl", "Name", "Price" },
@@ -30,65 +56,8 @@ namespace GeekShopping.ProductApi.Models.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DeleteData(
-                table: "Product",
-                keyColumn: "Id",
-                keyValue: 2L);
-
-            migrationBuilder.DeleteData(
-                table: "Product",
-                keyColumn: "Id",
-                keyValue: 3L);
-
-            migrationBuilder.DeleteData(
-                table: "Product",
-                keyColumn: "Id",
-                keyValue: 4L);
-
-            migrationBuilder.DeleteData(
-                table: "Product",
-                keyColumn: "Id",
-                keyValue: 5L);
-
-            migrationBuilder.DeleteData(
-                table: "Product",
-                keyColumn: "Id",
-                keyValue: 6L);
-
-            migrationBuilder.DeleteData(
-                table: "Product",
-                keyColumn: "Id",
-                keyValue: 7L);
-
-            migrationBuilder.DeleteData(
-                table: "Product",
-                keyColumn: "Id",
-                keyValue: 8L);
-
-            migrationBuilder.DeleteData(
-                table: "Product",
-                keyColumn: "Id",
-                keyValue: 9L);
-
-            migrationBuilder.DeleteData(
-                table: "Product",
-                keyColumn: "Id",
-                keyValue: 10L);
-
-            migrationBuilder.DeleteData(
-                table: "Product",
-                keyColumn: "Id",
-                keyValue: 11L);
-
-            migrationBuilder.DeleteData(
-                table: "Product",
-                keyColumn: "Id",
-                keyValue: 12L);
-
-            migrationBuilder.DeleteData(
-                table: "Product",
-                keyColumn: "Id",
-                keyValue: 13L);
+            migrationBuilder.DropTable(
+                name: "Product");
         }
     }
 }

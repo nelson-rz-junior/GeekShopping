@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace GeekShopping.ProductApi.Models.Migrations
+namespace GeekShopping.ProductApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230109165401_AddSeedProducts")]
-    partial class AddSeedProducts
+    [Migration("20230110022612_InitialConfiguration")]
+    partial class InitialConfiguration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
