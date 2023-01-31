@@ -1,5 +1,8 @@
 ﻿using GeekShopping.Web.Models;
 using GeekShopping.Web.Services.Interfaces;
+using GeekShopping.Web.Utils;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GeekShopping.Web.Controllers;
@@ -13,10 +16,13 @@ public class ProductController : Controller
         _productService = productService ?? throw new ArgumentNullException(nameof(productService));
     }
 
+    [Authorize]
     [HttpGet]
     public async Task<IActionResult> Index()
     {
-        var products = await _productService.GetAllAsync();
+        var token = await HttpContext.GetTokenAsync("access_token");
+
+        var products = await _productService.GetAllAsync(token);
         return View(products);
     }
 
@@ -26,12 +32,15 @@ public class ProductController : Controller
         return View();
     }
 
+    [Authorize]
     [HttpPost]
     public async Task<IActionResult> Create(ProductViewModel viewModel)
     {
         if (ModelState.IsValid)
         {
-            var product = await _productService.CreateAsync(viewModel);
+            var token = await HttpContext.GetTokenAsync("access_token");
+
+            var product = await _productService.CreateAsync(viewModel, token);
             if (product != null)
             {
                 return RedirectToAction(nameof(Index));
@@ -44,7 +53,9 @@ public class ProductController : Controller
     [HttpGet]
     public async Task<IActionResult> Update(long id)
     {
-        var product = await _productService.GetByIdAsync(id);
+        var token = await HttpContext.GetTokenAsync("access_token");
+
+        var product = await _productService.GetByIdAsync(id, token);
         if (product != null)
         {
             return View(product);
@@ -53,12 +64,15 @@ public class ProductController : Controller
         return RedirectToAction(nameof(Index));
     }
 
+    [Authorize]
     [HttpPost]
     public async Task<IActionResult> Update(ProductViewModel viewModel)
     {
         if (ModelState.IsValid)
         {
-            var product = await _productService.UpdateAsync(viewModel);
+            var token = await HttpContext.GetTokenAsync("access_token");
+
+            var product = await _productService.UpdateAsync(viewModel, token);
             if (product != null)
             {
                 return RedirectToAction(nameof(Index));
@@ -68,10 +82,13 @@ public class ProductController : Controller
         return View(viewModel);
     }
 
+    [Authorize]
     [HttpGet]
     public async Task<IActionResult> Delete(long id)
     {
-        var product = await _productService.GetByIdAsync(id);
+        var token = await HttpContext.GetTokenAsync("access_token");
+
+        var product = await _productService.GetByIdAsync(id, token);
         if (product != null)
         {
             return View(product);
@@ -80,10 +97,13 @@ public class ProductController : Controller
         return RedirectToAction(nameof(Index));
     }
 
+    [Authorize(Roles = Role.ADMIN)]
     [HttpPost]
     public async Task<IActionResult> Delete(ProductViewModel viewModel)
     {
-        var response = await _productService.DeleteByIdAsync(viewModel.Id);
+        var token = await HttpContext.GetTokenAsync("access_token");
+
+        var response = await _productService.DeleteByIdAsync(viewModel.Id, token);
 
         return response ? RedirectToAction(nameof(Index)) : View(viewModel);
     }

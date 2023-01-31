@@ -7,17 +7,21 @@ public class ProductViewModel
     public long Id { get; set; }
 
     [Required(ErrorMessage = "The name is required")]
+    [StringLength(150)]
     public string Name { get; set; }
 
+    [StringLength(500)]
     public string? Description { get; set; }
 
     [Display(Name = "Category")]
+    [StringLength(50)]
     public string? CategoryName { get; set; }
 
     [Required(ErrorMessage = "The price is required")]
-    [Range(1, 10000, ErrorMessage = "The price must be between {1} and {2}")]
+    [RegularExpression(@"^(\d{1,10}(,\d{0,2})?)$", ErrorMessage = "The price is invalid")]
     public decimal Price { get; set; }
 
     [Display(Name = "Image Url")]
+    [StringLength(300)]
     public string? ImageUrl { get; set; }
 }

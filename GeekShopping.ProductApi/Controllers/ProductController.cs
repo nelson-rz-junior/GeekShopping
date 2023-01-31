@@ -1,11 +1,14 @@
 ﻿using GeekShopping.ProductApi.Data.ValueObjects;
 using GeekShopping.ProductApi.Repositories;
+using GeekShopping.ProductApi.Utils;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GeekShopping.ProductApi.Controllers;
 
 [Route("api/v1/[controller]")]
 [ApiController]
+[Authorize]
 public class ProductController : ControllerBase
 {
     private readonly IProductRepository _productRepository;
@@ -15,7 +18,7 @@ public class ProductController : ControllerBase
 		_productRepository = productRepository ?? throw new ArgumentNullException(nameof(productRepository));
 	}
 
-	[HttpGet]
+    [HttpGet]
 	public async Task<ActionResult<IEnumerable<ProductVO>>> GetAll()
 	{
 		var products = await _productRepository.GetAllAsync();
@@ -60,7 +63,8 @@ public class ProductController : ControllerBase
         return Ok(product);
     }
 
-	[HttpDelete("{id}")]
+    [Authorize(Roles = Role.ADMIN)]
+    [HttpDelete("{id}")]
 	public async Task<ActionResult<bool>> Delete(long id)
 	{
 		var result = await _productRepository.DeleteByIdAsync(id);

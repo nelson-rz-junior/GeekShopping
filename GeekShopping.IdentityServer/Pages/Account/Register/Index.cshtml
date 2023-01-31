@@ -1,0 +1,71 @@
+﻿@page
+@using GeekShopping.IdentityServer.Pages.Account.Register;
+@model IndexModel
+
+<div class="login-page">
+    <div class="lead">
+        <h3>Register</h3>
+        <p>Choose how to register</p>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Local Account</h5>
+                </div>
+
+                <div class="card-body">
+                    <form asp-page="/Account/Register/Index">
+                        <input type="hidden" asp-for="Register.ReturnUrl" />
+
+                        <div asp-validation-summary="ModelOnly" class="danger"></div>
+
+                        <div class="form-group">
+                            <label asp-for="Register.Username"></label>
+                            <input class="form-control" placeholder="Username" asp-for="Register.Username" autofocus>
+                            <span asp-validation-for="Register.Username" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Register.Email"></label>
+                            <input class="form-control" placeholder="Email" asp-for="Register.Email" autofocus>
+                            <span asp-validation-for="Register.Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Register.FirstName"></label>
+                            <input class="form-control" placeholder="First name" asp-for="Register.FirstName" autofocus>
+                            <span asp-validation-for="Register.FirstName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Register.LastName"></label>
+                            <input class="form-control" placeholder="Last name" asp-for="Register.LastName" autofocus>
+                            <span asp-validation-for="Register.LastName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Register.PhoneNumber"></label>
+                            <input type="text" class="form-control" placeholder="Phone number" asp-for="Register.PhoneNumber" autofocus>
+                            <span asp-validation-for="Register.PhoneNumber" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Register.Password"></label>
+                            <input type="password" class="form-control" placeholder="Password" asp-for="Register.Password" autocomplete="off">
+                            <span asp-validation-for="Register.Password" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Register.RoleName"></label>
+                            <select asp-for="Register.RoleName" class="form-control" asp-items="@(ViewData["roles"] as SelectList)">
+                                <option value="">Select a role</option>
+                            </select>
+                            <span asp-validation-for="Register.RoleName" class="text-danger"></span>
+                        </div>
+                        <button class="btn btn-primary" name="Register.Button" value="register">Register</button>
+                        <button class="btn btn-secondary" name="Register.Button" value="cancel">Cancel</button>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <a asp-page="/Account/Login/Index" asp-route-returnUrl="@Model.Register.ReturnUrl">Back to login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
