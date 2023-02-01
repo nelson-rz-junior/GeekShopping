@@ -16,7 +16,7 @@
                 </div>
 
                 <div class="card-body">
-                    <form asp-page="/Account/Register/Index">
+                    <form asp-page="/Account/Register/Index" asp-route-ReturnUrl="@Model.Register.ReturnUrl">
                         <input type="hidden" asp-for="Register.ReturnUrl" />
 
                         <div asp-validation-summary="ModelOnly" class="danger"></div>
@@ -63,7 +63,7 @@
                     </form>
                 </div>
                 <div class="card-footer">
-                    <a asp-page="/Account/Login/Index" asp-route-returnUrl="@Model.Register.ReturnUrl">Back to login</a>
+                    <a asp-page="/Account/Login/Index" asp-route-ReturnUrl="@Model.Register.ReturnUrl">Back to login</a>
                 </div>
             </div>
         </div>

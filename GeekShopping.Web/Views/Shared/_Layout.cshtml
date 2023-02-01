@@ -27,10 +27,12 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        @if (User.Identity.IsAuthenticated && User.IsInRole(Role.ADMIN))
+                        @if (User.Identity.IsAuthenticated)
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="Index">Products</a>
+                                <a class="nav-link text-secondary" asp-area="" asp-controller="Product" asp-action="Index">
+                                    <strong>Products</strong>
+                                </a>
                             </li>
                         }
                     </ul>

@@ -10,8 +10,8 @@ using IdentityModel;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using static GeekShopping.Pages.Login.ViewModel;
 using Duende.IdentityServer.Models;
+using static GeekShopping.Pages.Login.ViewModel;
 
 namespace GeekShopping.IdentityServer.Pages.Account.Register;
 
@@ -178,7 +178,7 @@ public class IndexModel : PageModel
             {
                 EnableLocalLogin = local,
                 ReturnUrl = returnUrl,
-                Username = context?.LoginHint,
+                Username = context?.LoginHint
             };
 
             if (!local)

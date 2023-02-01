@@ -161,7 +161,7 @@ public class Index : PageModel
 
         return Page();
     }
-        
+
     private async Task BuildModelAsync(string returnUrl)
     {
         Input = new InputModel
@@ -177,7 +177,7 @@ public class Index : PageModel
             // this is meant to short circuit the UI and only trigger the one external IdP
             View = new ViewModel
             {
-                EnableLocalLogin = local,
+                EnableLocalLogin = local
             };
 
             Input.Username = context?.LoginHint;
